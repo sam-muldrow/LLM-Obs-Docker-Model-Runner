@@ -1,0 +1,14 @@
+services:
+  python-genai:
+    build:
+      context: ./flask
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - PORT=8081
+    env_file:
+      - .env
+    restart: unless-stopped
+    extra_hosts:
+      - "model-runner.docker.internal:host-gateway"
