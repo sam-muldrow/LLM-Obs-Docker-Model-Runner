@@ -7,8 +7,8 @@ This chatbot uses [The LLM Obs SDK for Python](https://docs.datadoghq.com/llm_ob
 ## Environment Variables
 
 1. Create an `.env` file in the `llm_obs_docker_model_runner` directory with the following:
-- `LLM_BASE_URL`: The base URL of the LLM API
-- `LLM_MODEL_NAME`: The model name to use. [Here's the list of LLM Models](https://hub.docker.com/u/ai)
+- `LLM_BASE_URL`: The base URL of the LLM API (`http://host.docker.internal:12434/engines/llama.cpp/v1`)
+- `LLM_MODEL_NAME`: The model name to use. [Here's the list of LLM Models](https://hub.docker.com/u/ai) (example: `ai/smollm2`)
 - `DD_API_KEY`: A valid datadog API key
 
 2. Enable the [Docker Model Runner](https://docs.docker.com/ai/model-runner/get-started/)
